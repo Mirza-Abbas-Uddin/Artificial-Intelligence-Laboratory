@@ -1,0 +1,139 @@
+# List can contain any types of data
+from typing import List
+
+my_list = ['Mirza', 23, 3.5, 'Male', True]
+print(
+    f'Name:{my_list[0]}\nAge:{my_list[1]}\nNumber of years at UIU: {my_list[2]}\nGender:{my_list[3]}\nRegular Student:{my_list[4]}')
+print(type(my_list))
+print(len(my_list))
+
+# can also initialize using constructor
+my_list = ('Mirza', 23, 3.5, 'Male', True)
+print(
+    f'Name:{my_list[0]}\nAge:{my_list[1]}\nNumber of years at UIU: {my_list[2]}\nGender:{my_list[3]}\nRegular Student:{my_list[4]}')
+
+# can access like this
+this_list = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(this_list[2:5])
+
+# Change Item Value
+my_list = ['one', 'two', 'five']
+my_list[1] = 'four'
+print(my_list)
+
+# Change a Range of Item Values
+my_list = ['one', 'two', 'three', 'four', 'five']
+my_list[1:3] = ['nine', 'ten']
+print(my_list)
+
+# Change the second and third value by replacing it with one value:
+my_list = ['one', 'two', 'three', 'four', 'five']
+my_list[1:3] = ['nine']
+print(my_list)
+
+# add element like stack
+my_list.append("seven")
+print(my_list)
+
+# remove element from list
+my_list.remove('nine')
+print(my_list)
+# can also use pop
+my_list.pop()  # remove the last element
+print(f"POP: {my_list}")
+my_list.pop(1)  # works like remove
+print(f"POP: {my_list}")
+
+# add value position wise
+my_list.insert(0, 'zero')
+my_list.insert(2, 'two')
+my_list.insert(3, 'three')
+my_list.insert(len(my_list) - 1, 'six')
+print(my_list)
+
+# Extend list
+my_list1 = ['one', 'two']
+my_list2 = ['three', 'four']
+my_list1.extend(my_list2)
+print(my_list1)
+
+# join list
+list_1 = [1, 2, 3]
+list_2 = [4, 5, 6]
+list_3 = list_1 + list_2
+print(f"Join List:{list_3}")
+
+# delete entire list
+del my_list1, my_list2
+# print(my_list1, my_list2)  # ERROR: my_list1 and my_list2 does not exist
+
+# make empty list
+my_list.clear()
+print(my_list)
+
+# Loop Through a List
+my_list = ['one', 'two', 'three', 'four', 'five']
+# using for-each loop
+for value in my_list:
+    print(value, end=' ')
+print()
+
+# using for loop
+for index in range(len(my_list)):
+    print(my_list[index], end=' ')  # think like an index
+print()
+
+# using while loop:
+i = 0
+while i < len(my_list):
+    print(my_list[i], end=' ')
+    i += 1
+print()
+
+# Creating new list: I want values with specific requirements.For example, who has a in their names,
+# I want to create a new list with them
+
+names = ['Mirza', 'Abbas', 'Uddin', 'Berry', 'Hales', 'Monir']
+names_has_a = []
+for value in names:
+    if 'a' in value:  # it is case-sensitive, like if i put 'A' I'll get only Abbas in output
+        names_has_a.append(value)
+
+print(names)
+print(names_has_a)
+
+# Sort the list alphabetically:Dictionary Sort
+names.sort()
+print(names)
+names.sort(reverse=True)  # Sort the list descending
+print(names)
+
+# Sort the list numerically
+numbers = [2, 5, 1, 4, -6, 564, 3, -9, -0]
+print(numbers)
+numbers.sort()
+print(numbers)
+numbers.sort(reverse=True)  # Sort the list descending
+print(numbers)
+
+
+# Customize Sort Function: For example, numbers which are near at 50
+
+def my_sorting_style(n):
+    return abs(n - 50)
+
+
+numbers1 = [101, 50, 51, 70, 100, 45, 62, 67, 106]
+numbers1.sort(key=my_sorting_style)  # do not use any parenthesis
+print(numbers1)
+
+# copy list
+list_a = [1, 6, 8, 9]
+list_b = list_a.copy()
+print(list_b)
+
+# count specific value
+my_list = [1, 2, 3, 1, 3, 12, 3, 13, 4, 1, 2, 4]
+print(my_list.count(1))
+print(my_list.count(3))
+print(my_list.count(4))
