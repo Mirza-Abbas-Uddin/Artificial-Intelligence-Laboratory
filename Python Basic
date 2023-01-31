@@ -1,0 +1,41 @@
+# don't have to declare any datatype before initialising variable like c programming
+my_var = 5
+print(type(my_var))
+my_var = 5.5
+print(type(my_var))
+my_var = "Mirza"
+print(type(my_var))
+
+# assigning multiple values in a single line
+x, y, z = 5, 5.5, "Mirza"
+print(x, y, z)
+
+# automatically type casting
+a = 5  # int
+print(type(a))
+a = 5.5  # convert into float
+print(type(a))
+a = "Mirza"  # convert into string type
+print(type(a))
+
+# input taking
+# a = input("Enter a number: ")
+# b = input("Enter a number:")
+# print(a + b)  # a and b are string by default
+
+# type casting for specific input
+# a = int(input("Enter a number:"))
+# b = int(input("Enter a number:"))
+# print(a + b)  # a and b are int now
+
+# concatenation
+# a = "Hello"
+# b = 5
+# c = a + b  # ERROR: str + int
+# print(c)
+
+# need to type casting for b
+a = "Hello"
+b = 5
+c = a + str(b)
+print(c)
