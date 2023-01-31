@@ -39,3 +39,9 @@ a = "Hello"
 b = 5
 c = a + str(b)
 print(c)
+
+# can also delete a variable
+
+my_val = 5
+del my_val
+# print(my_val)  # ERROR : my_val doesn't exist
