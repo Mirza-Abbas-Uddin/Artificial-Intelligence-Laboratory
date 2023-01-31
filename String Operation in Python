@@ -1,0 +1,91 @@
+# single word string
+my_string = "Hello"
+print(my_string)
+# multiple string
+my_string = "Hello Everyone,my name is Mirza Abbas Uddin. I currently studying at CSE in UIU."
+print(my_string)
+# three double quote s
+my_string = """Hello Everyone,my name is Mirza Abbas Uddin. I currently studying at CSE in UIU."""
+print(my_string)
+
+# three single quote s
+my_string = '''Hello Everyone,my name is Mirza Abbas Uddin. I currently studying at CSE in UIU.'''
+print(my_string)
+
+print(my_string[0])  # single letter: works line an array
+print(my_string[0:6])  # multiple letter start from 0 and end to 5
+
+# printing single latter individually using loop
+
+my_string = 'Banana'
+
+for i in my_string:
+    print(i, end='  ')
+print()  # taking new line after ending the loop
+# length of a string
+my_string = '''Hello Everyone,my name is Mirza Abbas Uddin. I currently studying at CSE in UIU.'''
+print(len(my_string))
+
+# check any word present in the string or not
+txt = 'Mirza Abbas Uddin'
+
+if "Abbas" in txt:
+    print("Present")
+else:
+    print("Not present")
+
+# boolean type
+print("kamal" not in txt)
+
+# string slicing
+my_string = '0123456'
+print(my_string[2:5])  # index 2 to 5-1:234
+print(my_string[2:])  # index 2 to end:23456
+print(my_string[:3])  # index 0 to 3-1:012
+print(my_string[-1:])  # last index
+print(my_string[-5:-1])  # index 2 to last index-1
+
+# string modification
+my_string = "Mirza Abbas Uddin"
+print(f"Upper Case {my_string.upper()} ")
+print(f"Lower Case: {my_string.lower()}")
+my_string = " Mirza Abbas Uddin "
+my_string = my_string.strip()  # Remove Whitespace : "Mirza Abbas Uddin"
+print(my_string)
+
+print(my_string.replace("Mirza", "Tawsif"))  # string replace
+
+w1 = my_string.split(' ')[0]
+w2 = my_string.split(' ')[1]
+w3 = my_string.split(' ')[2]
+print(f"w1: {w1}\nw2:{w2}\nw3={w3}")
+# can use array/list
+words = [my_string.split(' ')]
+print(words)
+
+name1 = "Mirza"
+name2 = 'Abbas Uddin'
+full_name = name1 + ' ' + name2
+print(full_name)
+
+# string formatting
+txt = "My name is Mirza,I'm "
+age = 23
+# txt = txt + age  # ERROR
+txt = f"{txt}{age}"
+print(txt)
+txt = "My name is Mirza,I'm {} "
+print(txt.format(age))
+
+# another example
+quantity = 3
+item_number = 567
+price = 49.95
+my_order = f"I want {quantity} pieces of item {item_number} for {price}$."
+print(my_order)
+
+# Escape Characters
+txt = "We are the so-called 'Vikings' from the north."
+print(txt)
+txt = "We are the so-called \"Vikings\" from the north."
+print(txt)
