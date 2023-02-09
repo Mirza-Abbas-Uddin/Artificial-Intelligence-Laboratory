@@ -1,0 +1,148 @@
+# There are four collection data types in the Python programming language:
+
+# List is a collection which is ordered and changeable.Allows duplicate members.
+# Tuple is a collection which is ordered and unchangeable.Allows duplicate members.
+# Set is a collection which is unordered, unchangeable *, and un indexed.No duplicate members.
+# Dictionary is a collection which is ordered ** and changeable.No duplicate members.
+
+my_dict = {
+    "Name": "Mirza Abbas",
+    "Age": 23,
+    "Profession": "Student",
+    "University": "UIU",
+    "Dept": "CSE",
+    "CGPA": 3.6,
+    "Regular Student": True
+}
+print(my_dict)
+print(my_dict['Regular Student'])
+print(len(my_dict))
+print(type(my_dict))
+# print(my_dict[0]) # Error: 0 is not any index name
+
+# print values using get function
+print(my_dict.get("Name"))
+
+# Get the keys/indexes of my_dict
+print(my_dict.keys())
+
+# Get a list of the values:
+print(my_dict.values())
+
+# Get a list of the key:value pairs
+print(my_dict.items())
+
+# Check if Key Exists
+if "Name" in my_dict:
+    print(my_dict["Name"])
+else:
+    print(False)
+
+# Change Values
+my_dict["Name"] = "Mirza Abbas Uddin"
+print(my_dict)
+
+# add items
+my_dict["DOB"] = 2000
+print(my_dict)
+
+# update items
+my_dict["DOB"] = 2002
+print(my_dict)
+
+# Removing Items: Specific
+del my_dict["Regular Student"]
+print(my_dict)
+
+# Remove using pop function:
+my_dict.pop("Profession")
+print(my_dict)
+
+# Remove the last items
+my_dict.popitem()
+print(my_dict)
+
+# Empty the dictionary
+my_dict.clear()
+print(my_dict)
+
+# Delete the dictionary
+del my_dict
+# print(my_dict) # Error: my_dict no longer exist
+
+
+my_dict1 = {
+    "Name": "Mirza Abbas",
+    "Age": 23,
+    "Profession": "Student",
+    "University": "UIU",
+    "Dept": "CSE",
+    "CGPA": 3.6,
+    "Regular Student": True
+}
+# Loop Through a Dictionary
+# print the keys only using loop
+
+for i in my_dict1:  # or for i in my_dict1.keys()
+    print(i)
+print("---------------------")
+# print the values only using loop
+for i in my_dict1:  # or for i in my_dict1.values()
+    print(my_dict1[i])
+print("---------------------")
+
+# print both
+for i in my_dict1:  # or for i,j in my_dict1.items(): print(i,j)
+    print(f"{i}: {my_dict1[i]}")
+print("---------------------")
+
+# Copy a Dictionary
+my_dict2 = my_dict1.copy()  # pass by value
+print(my_dict2)
+
+my_dict3 = my_dict1  # pass by reference: change of my_dict1 will affect my_dict3
+print(my_dict3)
+
+my_dict1["DOB"] = 2002
+print(my_dict1)
+print(my_dict3)
+print("copy keys and values into a list")
+
+# copy keys and values into a list
+
+keys = []
+values = []
+for i in my_dict1:
+    keys.append(i)
+    values.append(my_dict1[i])
+
+print(keys)
+print(values)
+
+print("---------------------")
+# Nested Dictionaries
+my_nested_dict = {
+    "Tuple": {
+        "Feature1": "Ordered",
+        "Feature2": "Unchangeable",
+        "Feature3": "Duplication Allowed"
+    },
+    "List": {
+        "Feature1": "Ordered",
+        "Feature2": "Changeable",
+        "Feature3": "Duplication Allowed"
+    },
+    "Set": {
+        "Feature1": "Unordered and un-indexed",
+        "Feature2": "Unchangeable",
+        "Feature3": "Duplication Is Not Allowed"
+    },
+    "Dictionary": {
+        "Feature1": "Ordered",
+        "Feature2": "Changeable",
+        "Feature3": "Duplication Is Not Allowed"
+    }
+}
+for i, j in my_nested_dict.items():
+    print(i, j)
+
